@@ -1,7 +1,7 @@
-package com.tele2.assignment.subscriber.controller;
+package com.niks.asig.subscriber.controller;
 
-import com.tele2.assignment.subscriber.model.Subscription;
-import com.tele2.assignment.subscriber.respository.SubscriptionStore;
+import com.niks.asig.subscriber.model.Subscription;
+import com.niks.asig.subscriber.respository.SubscriptionStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;

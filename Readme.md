@@ -3,7 +3,12 @@ To Run project on local
 mvn spring-boot:run
 
 Swagger UI: http://localhost:8080/api/swagger-ui.html
+
 API: http://localhost:8080/api/subscriptions
+
+Http Basic Auth
+
+curl -X GET -u user:user --header 'Accept: application/json' 'http://localhost:8080/api/subscriptions'
 
 To Run on docker with Monitoring, meterx
 
@@ -24,4 +29,4 @@ http://localhost:9090/targets
 
 
 
-TODO: , Security,  
+TODO: Reactive

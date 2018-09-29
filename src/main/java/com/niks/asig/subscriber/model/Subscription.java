@@ -1,4 +1,4 @@
-package com.tele2.assignment.subscriber.model;
+package com.niks.asig.subscriber.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

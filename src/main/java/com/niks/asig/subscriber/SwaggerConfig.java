@@ -1,4 +1,4 @@
-package com.tele2.assignment.subscriber;
+package com.niks.asig.subscriber;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

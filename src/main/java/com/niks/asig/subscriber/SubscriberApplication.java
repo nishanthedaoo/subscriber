@@ -1,4 +1,4 @@
-package com.tele2.assignment.subscriber;
+package com.niks.asig.subscriber;
 
 import io.prometheus.client.spring.boot.EnablePrometheusEndpoint;
 import io.prometheus.client.spring.boot.EnableSpringBootMetricsCollector;

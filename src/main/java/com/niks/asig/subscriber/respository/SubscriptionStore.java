@@ -1,7 +1,7 @@
-package com.tele2.assignment.subscriber.respository;
+package com.niks.asig.subscriber.respository;
 
 
-import com.tele2.assignment.subscriber.model.Subscription;
+import com.niks.asig.subscriber.model.Subscription;
 import org.springframework.stereotype.Repository;
 
 import java.time.Instant;
