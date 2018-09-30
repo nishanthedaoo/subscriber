@@ -2,6 +2,7 @@ package com.niks.asig.subscriber.controller;
 
 import com.niks.asig.subscriber.model.Subscription;
 import com.niks.asig.subscriber.respository.SubscriptionStore;
+import com.niks.asig.subscriber.service.SubscriptionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,12 +17,12 @@ import java.util.Collection;
 public class SubscriptionController {
 
     @Autowired
-    SubscriptionStore subscriptionStore;
+    SubscriptionService subscriptionService;
 
     @RequestMapping(value = "/subscriptions", method = RequestMethod.GET)
     @ResponseBody
     public Collection<Subscription> getAllSubscription(){
-    return subscriptionStore.getAllSubscription();
+    return subscriptionService.getAllSubscription();
 
     }
 
@@ -29,21 +30,21 @@ public class SubscriptionController {
     @ResponseBody
     public Subscription getAllSubscription(@PathVariable("subscriptionId") String subscriptionId){
 
-        return subscriptionStore.getSubscription(Integer.parseInt(subscriptionId));
+        return subscriptionService.getSubscription(Integer.parseInt(subscriptionId));
 
     }
     @RequestMapping(value = "/subscriptions/{subscriptionId}", method = RequestMethod.PUT)
     @ResponseBody
     public Subscription updateSubscriptionPrice(@PathVariable("subscriptionId")String subscriptionId,@RequestBody Subscription  subscription){
 
-        return subscriptionStore.updateSubscriptionPrice(subscription,Integer.parseInt(subscriptionId));
+        return subscriptionService.updateSubscriptionPrice(subscription,Integer.parseInt(subscriptionId));
 
     }
     @RequestMapping(value = "/subscriptions", method = RequestMethod.POST)
     @ResponseBody
     public void updateSubscriptionPrice(@RequestBody Subscription  subscription){
 
-         subscriptionStore.addSubscription(subscription);
+        subscriptionService.addSubscription(subscription);
 
     }
 
