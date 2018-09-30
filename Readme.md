@@ -14,12 +14,13 @@ To Run on docker with Monitoring, meterx
 
 1. mvn clean package
 
-2.docker-compose up
+2. docker-compose up
 
-3.//check Promethus 
+3.//check Promethus targets are UP
 http://localhost:9090/targets
 
 4.http://localhost:3000/
+login: user:admin username:admin
 
 4.1 add Promethus data source
 
