@@ -16,7 +16,7 @@ public class SwaggerConfig {
     @Bean
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .select()                 .apis(RequestHandlerSelectors.basePackage("com.tele2.assignment.subscriber.controller"))
+                .select()                 .apis(RequestHandlerSelectors.basePackage("com.niks.asig.subscriber.controller"))
                 .paths(regex("/subscriptions.*"))
                 .build();
     }
