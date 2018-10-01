@@ -30,7 +30,9 @@ curl -X POST -u user:user --header 'Content-Type: application/json' --header 'Ac
 
 2. docker-compose up
 
-3. check Promethus targets are UP
+3. Hit service curl -X GET -u user:user --header 'Accept: application/json' 'http://localhost:8080/api/subscriptions'
+
+3.1 check Promethus targets are UP
 http://localhost:9090/targets
 
 4.Login Grafana http://localhost:3000/
