@@ -1,7 +1,7 @@
-package com.tele2.assignment.subscriber;
+package com.niks.asig.subscriber;
 
-import com.tele2.assignment.subscriber.model.Subscription;
-import com.tele2.assignment.subscriber.respository.SubscriptionStore;
+import com.niks.asig.subscriber.model.Subscription;
+import com.niks.asig.subscriber.respository.SubscriptionStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

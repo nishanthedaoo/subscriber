@@ -1,4 +1,6 @@
-package com.tele2.assignment.subscriber.model;
+package com.niks.asig.subscriber.model;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.time.Instant;
 
@@ -6,7 +8,11 @@ public class Subscription {
     int id;
     String name;
     double monthlyPrice;
+    @JsonIgnore
     Instant lastUpdate;
+
+    public Subscription() {
+    }
 
     public Subscription(int id, String name, double monthlyPrice, Instant lastUpdate) {
         this.id = id;
