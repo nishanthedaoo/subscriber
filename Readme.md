@@ -2,7 +2,7 @@
 
 mvn spring-boot:run
 
-Swagger UI: http://localhost:8080/api/swagger-ui.html
+Swagger UI: usernamer:user, password:user http://localhost:8080/api/swagger-ui.html
 
 API Endpoint: http://localhost:8080/api/subscriptions
 
