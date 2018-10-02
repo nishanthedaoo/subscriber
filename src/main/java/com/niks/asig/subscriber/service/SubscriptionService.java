@@ -12,6 +12,10 @@ import java.util.Collection;
 
 @Service
 public class SubscriptionService {
+    public SubscriptionService(SubscriptionStore subscriptionStore) {
+        this.subscriptionStore = subscriptionStore;
+    }
+
     @Autowired
     SubscriptionStore subscriptionStore;
     @Transactional(readOnly = true)

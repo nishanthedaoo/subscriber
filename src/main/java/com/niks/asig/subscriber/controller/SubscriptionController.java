@@ -4,17 +4,17 @@ import com.niks.asig.subscriber.model.Subscription;
 import com.niks.asig.subscriber.respository.SubscriptionStore;
 import com.niks.asig.subscriber.service.SubscriptionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
 @RestController
 public class SubscriptionController {
+
+    public SubscriptionController(SubscriptionService subscriptionService) {
+        this.subscriptionService = subscriptionService;
+    }
 
     @Autowired
     SubscriptionService subscriptionService;
@@ -28,7 +28,7 @@ public class SubscriptionController {
 
     @RequestMapping(value = "/subscriptions/{subscriptionId}", method = RequestMethod.GET)
     @ResponseBody
-    public Subscription getAllSubscription(@PathVariable("subscriptionId") String subscriptionId){
+    public Subscription getSubscription(@PathVariable("subscriptionId") String subscriptionId){
 
         return subscriptionService.getSubscription(Integer.parseInt(subscriptionId));
 
@@ -42,7 +42,8 @@ public class SubscriptionController {
     }
     @RequestMapping(value = "/subscriptions", method = RequestMethod.POST)
     @ResponseBody
-    public void updateSubscriptionPrice(@RequestBody Subscription  subscription){
+    @ResponseStatus(HttpStatus.CREATED)
+    public void addSubscription(@RequestBody Subscription  subscription){
 
         subscriptionService.addSubscription(subscription);
 
